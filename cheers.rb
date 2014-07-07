@@ -50,7 +50,7 @@ else
   dif = daysAway(today, bday)
   if dif < 0 || dif > maxDays
     year = today.yday > bday.yday ? today.year+1 : today.year
-    month = bday .month
+    month = bday.month
     day = bday.month === 2 && bday.day === 29 && !Date.leap?(year) ? 28 : bday.day
     bday = Date.new(year, month, day)
   end
